@@ -2,11 +2,41 @@
 <html>
   <head>
 	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>Zeniga Mail</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css" />
   </head>
   <body>
-	Hello, hata-san!
+
+
+	<div class="container-fluid">	 	  
+
+	  <div class="row">
+		<div class="span1">
+		  <!-- Title -->
+		  {{template "title" .}}
+		</div>
+	  </div>
+
+	  <div class="row-fluid">
+		
+		<div class="span2">
+		  <!-- Side bar -->
+		  {{template "sideBar" .}}
+		</div>
+		
+		<div class="span10">
+		  <!-- Main pane -->
+		  {{template "mainPane" .}}	
+		</div>
+
+	  </div>
+	</div>
+
+	<!-- Scripts -->
+	{{template "script" .}}
   </body>
 </html>
 {{end}}
